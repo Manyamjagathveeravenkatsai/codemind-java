@@ -1,18 +1,21 @@
-import java.util.Scanner;
-class downtriangle
+import java.util.*;
+class Diagonalpattern
 {
-    public static void main(String args[])
-    {
-    	Scanner sc = new Scanner(System.in); 
-    	int r = sc.nextInt();
-    	for (int i=r;i<=r&&i>0; i--)
-    	{
-    		for (int j=1;j<=i;j++)
-    		{
-    			System.out.print(j);
-   			}
-    		System.out.println();
-    	}
-    	sc.close();
-    }
+	public static void main(String args[]) 
+	{
+		Scanner sc=new Scanner(System.in);
+		int n;
+		n=sc.nextInt();
+		for(int i=1;i<=n;i++)
+		{
+			for(int j=1;j<=n;j++)
+			{
+				if(i==j || i+j==n+1)
+					System.out.print("x");
+				else
+					System.out.print("0");
+			}
+			System.out.println("");
+		}
+	}
 }
