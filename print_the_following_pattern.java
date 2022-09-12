@@ -8,12 +8,9 @@ class Diagonalpattern
 		n=sc.nextInt();
 		for(int i=1;i<=n;i++)
 		{
-			for(int j=1;j<=n;j++)
+			for(int j=n;j>=1;j--)
 			{
-				if(i==j || i+j==n+1)
-					System.out.print("x");
-				else
-					System.out.print("0");
+			   System.out.print(j+" ");
 			}
 			System.out.println("");
 		}
