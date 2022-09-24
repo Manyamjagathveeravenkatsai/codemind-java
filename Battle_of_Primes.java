@@ -1,32 +1,32 @@
 import java.util.*;
-class Battleofprimes
+class Sample
 {
-     public static boolean isprime(int n) 
-    { 
-      int count=0; 
-        for (int i=2;i<=(int)Math.sqrt(n);i++) 
-    { 
-    if (n%i==0) 
-       count++; 
-    } 
-    if (count==0) 
-        return true ; 
-    else  
-        return false; 
-    } 
+    public static boolean isPrime(int n)
+    {
+        if(n==1)
+        return false;
+        for(int i=2;i<=(int)Math.sqrt(n);i++)
+        {
+            if(n%i==0)
+            return false;
+        }
+        return true;
+    }
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
-        int a,b,sum=0,p=0;
-        a=sc.nextInt();
-        b=sc.nextInt();
-        sum=a+b;
-        for(int i=sum+1; ;i++)
+        int m,n,c=0,r;
+        m=sc.nextInt();
+        n=sc.nextInt();
+        r=m+n;
+        for(int i=1;;i++)
         {
-            p++;
-            if (isprime(i))
-            break;
-        }
-        System.out.println(p);
+            c++;
+            if(isPrime(r+i))
+            {
+              System.out.println(c);
+              break;
+            }
+        }    
     }
 }
