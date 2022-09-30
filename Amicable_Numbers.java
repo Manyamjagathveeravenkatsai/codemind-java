@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class Sample
+class Amicablenumber
 {
     public static void main(String args[])
     {
@@ -11,7 +11,6 @@ class Sample
         {
             if(n1%i==0)
         {
-        
             sum1=sum1+i;
         }
         }  
