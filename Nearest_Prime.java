@@ -45,7 +45,5 @@ class NearestPrime
             System.out.println(d2);
             t--;
 	    }
-	 
   }
-  
 }
