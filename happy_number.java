@@ -1,5 +1,5 @@
 import java.util.*;
-class HappyNumber
+class Happynumber
 {
     public static int happyNumber(int n)
     {
