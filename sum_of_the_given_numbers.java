@@ -1,18 +1,18 @@
 import java.util.*;
-class SumofGivenNumber
+class Sumofnumbers
 {
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
-        int t,n1,n2,sum;
+        int t,m,n;
         t=sc.nextInt();
         while(t>0)
         {
-            n1=sc.nextInt();
-            n2=sc.nextInt();
-            sum=n1+n2;
+            m=sc.nextInt();
+            n=sc.nextInt();
+            int sum=m+n;
             System.out.println(sum);
-            t--;
         }
+        t--;
     }
 }
