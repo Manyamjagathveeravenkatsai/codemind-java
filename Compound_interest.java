@@ -1,5 +1,5 @@
 import java.util.*;
-class  CompoundInterest
+class CompoundInterest
 {
     public static void main(String args[])
     {
