@@ -3,20 +3,22 @@ class Descendingarray
 {
     public static void main(String args[])
     {
-        Scanner sc=new Scanner(System.in);
-        int x[],n,i;
-        n=sc.nextInt();
-        x=new int[n];
-        for(i=0;i<n;i++)
-            x[i]=sc.nextInt();
-        for(i=0;i<n-1;i++)
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int x[]=new int[n];
+        for(int i=0;i<n;i++)
+            x[i]=s.nextInt();
+        int co=0;
+        for(int i=0;i<(n-1);i++)
         {
-            if(x[i+1]>x[i])
-            {
-                System.out.print("no");
-                System.exit(0);
-            }
+            if (x[i]>x[i+1])
+                co++;
         }
-        System.out.print("yes");
+        if(x[n-2]>x[n-1])
+            co++;
+        if (co==n)
+            System.out.print("yes");
+        else
+            System.out.print("no");
     }
 }
