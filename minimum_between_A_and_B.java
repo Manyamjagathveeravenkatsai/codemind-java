@@ -8,7 +8,7 @@ class  MinimumBetweenAandB
         n=sc.nextInt();
         x=new int[n];
         for(i=0;i<n;i++)
-        x[i]=sc.nextInt();
+            x[i]=sc.nextInt();
         a=sc.nextInt();
         b=sc.nextInt();
         int min=x[1];
