@@ -1,5 +1,5 @@
 import java.util.*;
-class MaximumOfNumbersBetweenAandB
+class  MaximumBetweenAandB
 {
     public static void main(String args[])
     {
@@ -8,10 +8,10 @@ class MaximumOfNumbersBetweenAandB
         n=sc.nextInt();
         x=new int[n];
         for(i=0;i<n;i++)
-        x[i]=sc.nextInt();
+            x[i]=sc.nextInt();
         a=sc.nextInt();
         b=sc.nextInt();
-        int max=x[0];
+        int max=x[1];
         for(i=0;i<n;i++)
         {
           if(x[i]>=a&&x[i]<=b)
@@ -19,8 +19,6 @@ class MaximumOfNumbersBetweenAandB
               if(max<x[i])
               max=x[i];
               count++;
-              if(count==0)
-              System.out.println("-1");
           }
         }
         if(count==0)
