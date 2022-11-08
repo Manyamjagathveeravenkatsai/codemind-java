@@ -1,46 +1,41 @@
-import java.util.Scanner;
-class ClosestPrime
+import java.util.*;
+class Sample
 {
-  public static boolean isPrime(int n)
-  {
-     int count=0;
-	 for(int i=2;i<=(int)Math.sqrt(n);i++)
-	 {
-	    if(n%i==0)
-		  count++;
-	 }
-	 if(count==0)
-	    return true;
-	 else
-	    return false;
-  }
-   public static void main(String args[])
-  {
-     Scanner sc=new Scanner(System.in);
-	 int n,i,d1,d2;
-         n=sc.nextInt();
-         
-	 for(i=n;;i--)
-	 {
-	     if(isPrime(i))
-		 {
-		   d1=i;
-                   break;
-		 }
-	 } 
-	for(i=n;;i++)
-	 {
-	     if(isPrime(i))
-		 {
-		   d2=i;
-                   break;
-		 }
-	 } 
-        if((n-d1)<=(d2-n))
-            System.out.println(n-d1);
+    public static boolean isprime(int n)
+    {
+        if(n==1)
+        return false;
+        for(int i=2;i<=(int)Math.sqrt(n);i++)
+        {
+            if(n%i==0)
+            return false;
+        }
+        return true;
+    }
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int n,d1,d2;
+        n=sc.nextInt();
+        for(int i=n;;i++)
+        {
+            if(isprime(i))
+            {
+                d1=i;
+                break;
+            }
+        }
+        for(int j=n;;j--)
+        {
+            if(isprime(j))
+            {
+                d2=j;
+                break;
+            }
+        }
+        if((d1-n)>=(n-d2))
+            System.out.println(n-d2);
         else
-            System.out.println(d2-n);
-	 
-  }
-  
+            System.out.println(d1-n);
+    }
 }
